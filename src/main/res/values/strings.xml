@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name"><center>Toronto Maple Leafs(2018-19)</center></string>
+    <string-array name="serviceLines">
+        <item>Tap to Select Line</item>
+        <item>Line 1</item>
+        <item>Line 2</item>
+        <item>Line 3</item>
+        <item>Line 4</item>
+        <item>Defencive Pairing 1</item>
+        <item>Defencive Pairing 2</item>
+        <item>Defencive Pairing 3</item>
+        <item>1st power-play Unit</item>
+        <item>2nd power-play Unit</item>
+
+    </string-array>
+</resources>

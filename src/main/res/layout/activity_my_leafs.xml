@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="eecs1022.myleafs.myLeafs"
+    android:background= "@drawable/leafsstars">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/logo"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Leafs Line"
+        android:id="@+id/lineSel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor= "#FFFF00"
+        android:background="#706d66" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerLine"
+        android:layout_below="@+id/lineSel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:entries="@array/serviceLines"
+        android:background="#ffea00"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search for Players by Typing their #"
+        android:id="@+id/numPlayer"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignRight="@+id/playerName"
+        android:layout_alignEnd="@+id/playerName"
+        android:textColor= "#FFFF00"
+        android:background="#706d66" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pN"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignRight="@+id/numPlayer"
+        android:layout_alignEnd="@+id/numPlayer"
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button"
+        android:textColor= "#040000"
+        android:background="#ffea00"
+        android:layout_below="@+id/numPlayer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="__________________________________________"
+        android:id="@+id/lineReturn"
+        android:textColor= "#ffffff"
+        android:background="#0000FF"
+        android:layout_below="@+id/textView6"
+        android:layout_toLeftOf="@+id/pN"
+        android:layout_toStartOf="@+id/pN"
+        android:layout_marginTop="39dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:id="@+id/button"
+        android:onClick="buttonGetPlayerInfo"
+        android:background="#050005"
+        android:textColor= "#FFFFFF"
+        android:layout_below="@+id/numPlayer"
+        android:layout_alignLeft="@+id/button8"
+        android:layout_alignStart="@+id/button8" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:id="@+id/button2"
+        android:onClick="buttonGetLines"
+        android:background="#050005"
+        android:textColor= "#FFFFFF"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="______________________"
+        android:id="@+id/playerName"
+        android:layout_below="@+id/pN"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="34dp"
+        android:textColor= "#ffffff"
+        android:background="#0d00ff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="______________________"
+        android:id="@+id/playerPosition"
+        android:layout_below="@+id/playerName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="43dp"
+        android:textColor= "#ffffff"
+        android:background="#001eff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ordered List of Players by #"
+        android:id="@+id/textView"
+        android:layout_alignTop="@+id/lineSel"
+        android:layout_alignLeft="@+id/playerName"
+        android:layout_alignStart="@+id/playerName"
+        android:textColor= "#FFFF00"
+        android:autoText="false"
+        android:background="#706d66" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|2 |3 |11|12|16|18|22|23|"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:textColor= "#FFFF00"
+        android:background="#706d66" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|24|26|28|29|31|32|33|"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:textColor= "#FFFF00"
+        android:background="#706d66" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|34|40|43|44|51|52|63|91|92|"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView5"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:textColor= "#FFFF00"
+        android:background="#706d66" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GOAL"
+        android:id="@+id/buttonPlay"
+        android:onClick="onMusicStart"
+        android:background="#0000FF"
+        android:textColor= "#FFFFFF"
+        android:layout_alignTop="@+id/button5"
+        android:layout_toRightOf="@+id/button5"
+        android:layout_toEndOf="@+id/button5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIC"
+        android:id="@+id/button3"
+        android:onClick="onVicPlay"
+        android:background="#0000FF"
+        android:textColor= "#FFFFFF"
+        android:layout_above="@+id/numPlayer"
+        android:layout_alignTop="@+id/button6"
+        android:layout_toRightOf="@+id/button6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S"
+        android:id="@+id/button4"
+        android:onClick="onVicStop"
+        android:background="#ff0d00"
+        android:textColor= "#FFFFFF"
+        android:layout_toRightOf="@+id/button8"
+        android:layout_toStartOf="@+id/button9"
+        android:layout_alignBottom="@+id/imageView"
+        android:textAlignment="center"
+        android:layout_toLeftOf="@+id/button9" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALT"
+        android:id="@+id/button5"
+        android:onClick="onIntroClick"
+        android:background="#0000FF"
+        android:textColor= "#FFFFFF"
+        android:layout_above="@+id/imageView"
+        android:layout_alignRight="@+id/lineSel"
+        android:layout_alignEnd="@+id/lineSel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P"
+        android:id="@+id/button8"
+        android:onClick="onVicPause"
+        android:background="#118301"
+        android:textColor= "#FFFFFF"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/buttonPlay"
+        android:layout_toLeftOf="@+id/button3"
+        android:layout_toStartOf="@+id/button3" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POWER"
+        android:id="@+id/button6"
+        android:background="#0000FF"
+        android:textColor="#FFFFFF"
+        android:onClick="onPowerPlay"
+        android:layout_alignTop="@+id/buttonPlay"
+        android:layout_toRightOf="@+id/buttonPlay"
+        android:layout_toEndOf="@+id/buttonPlay" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INT"
+        android:background="#0000FF"
+        android:textColor= "#FFFFFF"
+        android:id="@+id/button7"
+        android:onClick="onprimintro"
+        android:layout_below="@+id/button5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make sure device is in PORTRAIT Mode while the game is on + Select STOP after audio finishes playing!"
+        android:id="@+id/textView3"
+        android:textColor= "#0b0505"
+        android:background="#ff0900"
+        android:layout_above="@+id/buttonPlay"
+        android:layout_toRightOf="@+id/button2"
+        android:layout_toEndOf="@+id/button2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RES"
+        android:id="@+id/button9"
+        android:background="#FF4500"
+        android:textColor= "#FFFFFF"
+        android:layout_alignTop="@+id/button4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onResume"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>
